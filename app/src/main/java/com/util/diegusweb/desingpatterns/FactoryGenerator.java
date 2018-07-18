@@ -10,6 +10,8 @@ public class FactoryGenerator {
             return new BreadFactory();
         }else if(factoryType == "FIL"){
             return new FillingFactory();
+        }else if(factoryType == "DRI"){
+            return new DrinkFactory();
         }
 
         return null;

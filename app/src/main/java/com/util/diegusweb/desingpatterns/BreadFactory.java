@@ -22,4 +22,9 @@ public class BreadFactory extends AbstractFactory{
     Filling getFilling(String fillingtype) {
         return null;
     }
+
+    @Override
+    Drink getDrink(String drinkType) {
+        return null;
+    }
 }

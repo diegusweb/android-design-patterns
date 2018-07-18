@@ -20,5 +20,9 @@ public class MainActivity extends AppCompatActivity {
         AbstractFactory breadFactory = FactoryGenerator.getFactory("BRE");
         Bread bread = breadFactory.getBread("BAG");
         Log.d(TAG, bread.name() + bread.calories());
+
+        AbstractFactory drinkFactory = FactoryGenerator.getFactory("DRI");
+        Drink drink = drinkFactory.getDrink("COK");
+        Log.d(TAG, drink.name() + drink.calories());
     }
 }
