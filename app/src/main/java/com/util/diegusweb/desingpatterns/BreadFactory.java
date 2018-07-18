@@ -4,6 +4,9 @@ public class BreadFactory extends AbstractFactory{
 
     @Override
     Bread getBread(String breadType) {
+
+        if(breadType == null) return null;
+
         if(breadType == "BAG"){
             return new Baguette();
         }else if(breadType == "ROL"){

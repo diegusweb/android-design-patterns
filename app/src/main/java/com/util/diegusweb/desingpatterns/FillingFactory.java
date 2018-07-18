@@ -9,6 +9,9 @@ public class FillingFactory extends AbstractFactory{
 
     @Override
     Filling getFilling(String fillingtype) {
+
+        if(fillingtype == null) return null;
+
         if(fillingtype == "CHE"){
             return new Cheese();
         }else if(fillingtype == "TOM"){
