@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView textView = findViewById(R.id.text_view);
+        /*TextView textView = findViewById(R.id.text_view);
 
         BreadFactory breadFactory = new BreadFactory();
         Bread bread = breadFactory.getBread("BAG");
@@ -19,6 +19,6 @@ public class MainActivity extends AppCompatActivity {
         textView.setText(new StringBuilder()
                 .append(bread.name())
                 .append(bread.calories())
-                .toString());
+                .toString());*/
     }
 }
