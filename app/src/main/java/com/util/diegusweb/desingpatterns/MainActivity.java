@@ -2,23 +2,27 @@ package com.util.diegusweb.desingpatterns;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG ="MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*TextView textView = findViewById(R.id.text_view);
+        AbstractFactory fillingFactory = FactoryGenerator.getFactory("FIL");
+        Filling filling = fillingFactory.getFilling("TOM");
+        Log.d(TAG, filling.name() + filling.calories());
 
-        BreadFactory breadFactory = new BreadFactory();
+        AbstractFactory breadFactory = FactoryGenerator.getFactory("BRE");
         Bread bread = breadFactory.getBread("BAG");
+        Log.d(TAG, bread.name() + bread.calories());
 
-        textView.setText(new StringBuilder()
-                .append(bread.name())
-                .append(bread.calories())
-                .toString());*/
+        AbstractFactory drinkFactory = FactoryGenerator.getFactory("DRI");
+        Drink drink = drinkFactory.getDrink("COK");
+        Log.d(TAG, drink.name() + drink.calories());
     }
 }

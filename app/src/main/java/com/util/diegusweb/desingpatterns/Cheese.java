@@ -1,26 +1,25 @@
 package com.util.diegusweb.desingpatterns;
 
-public class Baguette implements Bread{
+public class Cheese implements Filling{
 
     @Override
     public String name() {
-        return "Baguette";
+        return "Queso";
     }
 
     @Override
     public int calories() {
-        return 250;
+        return 52 ;
     }
 
     @Override
     public String description() {
-        return "un baguet recien hecha";
+        return "Una loncha de queso francés";
     }
 
     @Override
     public String image() {
-        return "R.drawable.baguette";
+        return "R.drawable.cheese";
     }
 }
-
 

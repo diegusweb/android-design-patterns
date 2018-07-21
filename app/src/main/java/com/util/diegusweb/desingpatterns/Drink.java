@@ -1,6 +1,6 @@
 package com.util.diegusweb.desingpatterns;
 
-public interface Bread {
+public interface Drink {
     String name();
     int calories();
     String description();

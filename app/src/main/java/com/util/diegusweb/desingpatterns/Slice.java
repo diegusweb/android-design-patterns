@@ -8,7 +8,20 @@ public class Slice implements Bread{
     }
 
     @Override
-    public String calories() {
-        return " : 80 kcal";
+    public int calories() {
+        return 80;
     }
+
+    @Override
+    public String description() {
+        return "Suave y tierno";
+    }
+
+    @Override
+    public String image() {
+        return "R.drawable.sliced";
+    }
+
 }
+
+

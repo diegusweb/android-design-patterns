@@ -1,26 +1,25 @@
 package com.util.diegusweb.desingpatterns;
 
-public class Baguette implements Bread{
+public class Coke implements Drink{
 
     @Override
     public String name() {
-        return "Baguette";
+        return "Coca cola";
     }
 
     @Override
     public int calories() {
-        return 250;
+        return 140;
     }
 
     @Override
     public String description() {
-        return "un baguet recien hecha";
+        return null;
     }
 
     @Override
     public String image() {
-        return "R.drawable.baguette";
+        return null;
     }
 }
-
 

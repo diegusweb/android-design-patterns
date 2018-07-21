@@ -8,7 +8,17 @@ public class Roll implements Bread{
     }
 
     @Override
-    public String calories() {
-        return " : 169 kcal";
+    public int calories() {
+        return 169;
+    }
+
+    @Override
+    public String description() {
+        return "un roll demo";
+    }
+
+    @Override
+    public String image() {
+        return "R.drawable.roll";
     }
 }

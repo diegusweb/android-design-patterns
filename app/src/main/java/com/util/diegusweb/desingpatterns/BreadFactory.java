@@ -1,8 +1,11 @@
 package com.util.diegusweb.desingpatterns;
 
-public class BreadFactory {
+public class BreadFactory extends AbstractFactory{
 
-    public Bread getBread(String breadType){
+    @Override
+    Bread getBread(String breadType) {
+
+        if(breadType == null) return null;
 
         if(breadType == "BAG"){
             return new Baguette();
@@ -13,6 +16,15 @@ public class BreadFactory {
         }
 
         return null;
+    }
 
+    @Override
+    Filling getFilling(String fillingtype) {
+        return null;
+    }
+
+    @Override
+    Drink getDrink(String drinkType) {
+        return null;
     }
 }
