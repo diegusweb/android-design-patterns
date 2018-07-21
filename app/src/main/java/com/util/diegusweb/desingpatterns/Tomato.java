@@ -1,6 +1,6 @@
 package com.util.diegusweb.desingpatterns;
 
-public class Tomato implements Filling{
+public class Tomato extends Filling{
 
     @Override
     public String name() {

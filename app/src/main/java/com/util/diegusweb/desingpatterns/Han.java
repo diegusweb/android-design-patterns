@@ -1,6 +1,6 @@
 package com.util.diegusweb.desingpatterns;
 
-public class Han implements Filling{
+public class Han extends Filling{
 
     @Override
     public String name() {

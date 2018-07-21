@@ -1,6 +1,6 @@
 package com.util.diegusweb.desingpatterns;
 
-public class Cheese implements Filling{
+public class Cheese extends Filling{
 
     @Override
     public String name() {
