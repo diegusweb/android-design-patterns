@@ -1,6 +1,6 @@
 package com.util.diegusweb.desingpatterns;
 
-public class Baguette implements Bread{
+public class Baguette extends Bread{
 
     @Override
     public String name() {
