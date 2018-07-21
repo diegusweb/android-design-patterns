@@ -13,16 +13,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        AbstractFactory fillingFactory = FactoryGenerator.getFactory("FIL");
-        Filling filling = fillingFactory.getFilling("TOM");
-        Log.d(TAG, filling.name() + filling.calories());
+        SandwichBuilder builder = new SandwichBuilder();
 
-        AbstractFactory breadFactory = FactoryGenerator.getFactory("BRE");
-        Bread bread = breadFactory.getBread("BAG");
-        Log.d(TAG, bread.name() + bread.calories());
+        //jamon y queso
+        Sandwich s1 = builder.cheeseAndHam();
 
-        AbstractFactory drinkFactory = FactoryGenerator.getFactory("DRI");
-        Drink drink = drinkFactory.getDrink("COK");
-        Log.d(TAG, drink.name() + drink.calories());
+        Log.d(TAG, "Primer sandwich ");
+        s1.getIngredients();
+        s1.getCalories();
+
+        Sandwich s2 = builder.cheeseAndHam();
+        builder.build(s2, new Tomato());
+        Log.d(TAG, "Segundo sandwich ");
+        s2.getIngredients();
+        s2.getCalories();
+
+        Sandwich s3 = new Sandwich();
+        builder.build(s3, new Baguette());
+        builder.build(s3, new Cheese());
+        builder.build(s3, new Cheese());
+        builder.build(s3, new Tomato());
+
+        Log.d(TAG, "Tecer sandwich ");
+        s3.getIngredients();
+        s3.getCalories();
+
     }
 }
