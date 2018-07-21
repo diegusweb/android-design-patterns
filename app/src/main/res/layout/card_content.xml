@@ -13,7 +13,7 @@
         android:adjustViewBounds="true"
         android:contentDescription="@string/alt_text"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/sandwich" />
+        android:src="@drawable/baguette" />
 
     <TextView
         android:id="@+id/text_title"
