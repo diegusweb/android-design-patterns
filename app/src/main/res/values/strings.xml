@@ -7,4 +7,6 @@
     <string name="alt_text">Una imagen de tomates frescos</string>
     <string name="settings_button">Ajustes</string>
     <string name="search_button">buscar</string>
+    <string name="feature">feature</string>
+    <string name="detail">detail</string>
 </resources>
