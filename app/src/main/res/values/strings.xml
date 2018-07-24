@@ -5,4 +5,6 @@
     <string name="calories">30 calorías</string>
     <string name="add">Añadir</string>
     <string name="alt_text">Una imagen de tomates frescos</string>
+    <string name="settings_button">Ajustes</string>
+    <string name="search_button">buscar</string>
 </resources>
