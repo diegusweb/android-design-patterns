@@ -9,4 +9,8 @@
     <string name="search_button">buscar</string>
     <string name="feature">feature</string>
     <string name="detail">detail</string>
+    <string name="comedia">Comedia</string>
+    <string name="drama">drama</string>
+    <string name="terror">terror</string>
+    <string name="misterio">misterio</string>
 </resources>
