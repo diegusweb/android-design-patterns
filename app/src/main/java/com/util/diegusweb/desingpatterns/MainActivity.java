@@ -35,10 +35,18 @@ public class MainActivity extends AppCompatActivity {
             public void onDrawerOpened(View v){
                 super.onDrawerOpened(v);
                 Log.d(TAG, "onDrawerOpened");
+
+                //test singleton
+                User u = User.getUser();
+                u.setName("Joomla");
+                Log.d(TAG, "onDrawerOpened: " + u);
             }
 
             public void onDrawerClosed(View v){
                 super.onDrawerClosed(v);
+
+                User u = User.getUser();
+                Log.d(TAG, "onDrawerClosed: " + u);
                 Log.d(TAG, "onDrawerClosed");
             }
         };
@@ -76,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
 
 
         SandwichBuilder builder = new SandwichBuilder();
