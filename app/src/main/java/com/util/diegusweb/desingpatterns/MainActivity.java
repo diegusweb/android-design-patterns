@@ -1,11 +1,17 @@
 package com.util.diegusweb.desingpatterns;
 
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +28,48 @@ public class MainActivity extends AppCompatActivity {
             setSupportActionBar(toolbar);
 
         }
+
+        final DrawerLayout drawerLayout = findViewById(R.id.drawer);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.openDrawer, R.string.closeDrawer){
+            public void onDrawerOpened(View v){
+                super.onDrawerOpened(v);
+                Log.d(TAG, "onDrawerOpened");
+            }
+
+            public void onDrawerClosed(View v){
+                super.onDrawerClosed(v);
+                Log.d(TAG, "onDrawerClosed");
+            }
+        };
+
+        drawerLayout.setDrawerListener(toggle);
+        toggle.syncState();
+
+        //seleccion de cada item del menu
+        NavigationView navView = findViewById(R.id.nav_view);
+        navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                drawerLayout.closeDrawers();
+
+                switch (item.getItemId()){
+                    case R.id.drama:
+                        Log.d(TAG, "onNavigationItemSelected :drama");
+                        return true;
+                    case R.id.comedy:
+                        Log.d(TAG, "onNavigationItemSelected :comedia");
+                        return true;
+                    case R.id.misterio:
+                        Log.d(TAG, "onNavigationItemSelected :mistero");
+                        return true;
+                        default:
+                            return false;
+                }
+
+            }
+        });
+
 
         SandwichBuilder builder = new SandwichBuilder();
 
